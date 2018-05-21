@@ -393,7 +393,7 @@ export default {
     translations (lang) {
       lang = lang || 'en'
       let text = {
-        daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+        daysOfWeek: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
         limit: 'Limit reached ({{limit}} items max).',
         loading: 'Loading...',
         minLength: 'Min. Length',
@@ -621,7 +621,7 @@ export default {
         }
         this.dateRange[p] = []
         const currMonthFirstDay = new Date(time.year, time.month, 1)
-        let firstDayWeek = currMonthFirstDay.getDay() + 1
+        let firstDayWeek = currMonthFirstDay.getDay()
         if (firstDayWeek === 0) {
           firstDayWeek = 7
         }
